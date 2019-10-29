@@ -1,0 +1,17 @@
+
+
+<h1>Hey! We would like to know if you like coffee.</h1>
+<p>Do you like to drink coffee?</p>
+
+
+<div class="cent">
+    <form>
+            <!-- <form (submit)="detailsFormFun(preference)"> -->
+        <input class="inputForm" [(ngModel)]="preference" type="radio" name="preference" value="yes" id="preference"> Yes
+        <input class="inputForm" [(ngModel)]="preference" type="radio" name="preference" value="no"> No <br>
+        <!-- <input style="padding: 5px; margin: 15px" type="submit" name="preference" value="Submit"> -->
+    </form>
+    <button class="inputForm" (click)="detailsFormFun($event)" routerLink="">Submit</button>
+
+
+</div>

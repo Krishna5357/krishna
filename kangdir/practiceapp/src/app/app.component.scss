@@ -1,0 +1,18 @@
+.link {
+    background-color: rgb(217, 11, 224);
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px;        
+}
+   
+.link:hover {
+    color : rgb(3, 17, 212);
+    background-color: white;
+}
+
+.link:active {
+    background-color: white;
+    color: black;
+} 

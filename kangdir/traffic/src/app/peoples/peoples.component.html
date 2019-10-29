@@ -1,0 +1,45 @@
+
+<mat-toolbar style='background: rgb(74, 7, 97);'>
+  
+    <button mat-icon-button style="color:white">
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>AP TRAFFIC</h1>
+      <span class="menu-spacer"></span> 
+      <div style = 'margin-left: 6%;'>
+        <a mat-button routerLink="ch"> Challan </a>
+        <a mat-button routerLink="tf">Traffic Updates</a>
+        <a mat-button routerLink="ac"> Accidents </a>
+        <a mat-button routerLink="co"> Complaints </a>
+        <a mat-button routerLink="con"> Contact Us </a>
+  
+      </div>
+
+  <a style='margin-left: 33%; color: rgb(236, 239, 252); flex: 1 1 auto;' routerLink="logout">Logout</a>
+  
+  
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+    
+          <a mat-list-item routerLink="po"> Policies </a>
+          <a mat-list-item routerLink="ab"> About</a>
+          <a mat-list-item routerLink="set"> settings</a>
+          <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+    
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh; background-color: white">
+    
+          <router-outlet></router-outlet>
+        </div>
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+

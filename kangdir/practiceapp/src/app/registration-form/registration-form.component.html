@@ -1,0 +1,51 @@
+<mat-card class='mat-elevation-z16' style='border-radius: 35px;'>
+<h1>Registration form</h1>
+<p>Enter the details.</p>
+<div class="center">
+    <form action="">
+        first name:<br>
+         <input type="text" placeholder="enter first name" name="first_name" required [(ngModel)]="regForm['first_name']"><br><br>
+        last name: <br>
+         <input type="text" placeholder="enter last name" name="last_name" required [(ngModel)]="regForm['last_name']"><br><br>
+        dob:  <br>   
+           <input type="text" placeholder="dob" name="dob" required [(ngModel)]="regForm['dob']"><br><br>
+        
+        address:  <br>
+          <input type="text" placeholder="address" name="address" required [(ngModel)]="regForm['address']"><br><br>
+        email:   <br>   <input type="text" placeholder="email" name="email" required [(ngModel)]="regForm['email']"><br><br>
+        gender:     <input type="radio" placeholder="gender" name="gender" value="male" required [(ngModel)]="regForm['male']">male
+        <input type="radio" placeholder="gender" name="gender" value="female" required [(ngModel)]="regForm['female']">female<br><br>
+    </form>
+    <button class="inputForm" type="submit" (click)="post_records()" routerLink="">Submit</button><br>
+    <button class="inputForm" type="submit" (click)="put_records()" routerLink="">Update</button>
+    </div>
+    <form>
+        first name:<br>
+         <input type="text" placeholder="enter first name" name="first_name" required [(ngModel)]="regForm['first_name']"><br><br>
+    </form>
+    <button class="inputForm" type="submit" (click)="delete_records()" routerLink="">Delete</button><br>
+    <button class="inputForm" type="submit" (click)="patch_records()" routerLink="">patch</button>
+    <form action="">
+        first name:<br>
+         <input type="text" placeholder="enter first name" name="first_name" required [(ngModel)]="regForm['first_name']"><br><br>
+        last name: <br>
+         <input type="text" placeholder="enter last name" name="last_name" required [(ngModel)]="regForm['last_name']"><br><br>
+        dob:  <br>   
+           <input type="text" placeholder="dob" name="dob" required [(ngModel)]="regForm['dob']"><br><br>
+        
+        address:  <br>
+          <input type="text" placeholder="address" name="address" required [(ngModel)]="regForm['address']"><br><br>
+        email:   <br>   <input type="text" placeholder="email" name="email" required [(ngModel)]="regForm['email']"><br><br>
+        gender:     <input type="radio" placeholder="gender" name="gender" value="male" required [(ngModel)]="regForm['male']">male
+        <input type="radio" placeholder="gender" name="gender" value="female" required [(ngModel)]="regForm['female']">female<br><br>
+    </form>
+
+</mat-card>
+
+<mat-card class='mat-elevation-z16' style='border-radius: 35px;'>
+<div *ngIf="fulldata">
+    <div *ngFor="let i of fulldata">
+        <p>{{i.first_name}} &nbsp; {{i.last_name}} {{i.dob}}</p>
+    </div>
+</div>
+</mat-card>
